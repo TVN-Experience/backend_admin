@@ -1,0 +1,24 @@
+body {
+  font-size: 16px;
+}
+
+.page-content {
+	padding: 20px;
+}
+
+.message {
+	background-color: lightgrey;
+	padding: 10px;
+}
+
+.redtext {
+	color: red !important;
+}
+
+.redbackground {
+	background-color: red !important;
+}
+
+.buttonlink {
+  text-decoration: none;
+}
