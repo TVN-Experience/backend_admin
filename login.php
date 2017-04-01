@@ -19,7 +19,7 @@
 		$postedUsername = $_POST["username"];
 		$postedPassword = @crypt($_POST["password"], 'TVN-Experience'); // Encrypt the password
 		if (!empty($postedUsername) && !empty($postedPassword)) {
-			$sql = "SELECT `id` FROM  `" . TABLE_PREFIX . "backend_users` WHERE  `username` =  '$postedUsername' AND `password` = '$postedPassword'";
+			$sql = "SELECT `id` FROM  `" . TABLE_PREFIX . "users` WHERE  `username` =  '$postedUsername' AND `password` = '$postedPassword'";
 			$result = $backendDB->query($sql);
 			if ($result->num_rows > 0) {
 				while ($row = $result->fetch_assoc ()) {

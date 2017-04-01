@@ -3,10 +3,10 @@
 	session_start();
 
 	//Database configuration
-	define("DB_SERVER", "localhost");
-	define("DB_NAME", "fithappens");
-	define("DB_USERNAME", "root");
-	define("DB_PASSWORD", "");
+	define("DB_SERVER", "https://sql.hosted.hr.nl");
+	define("DB_NAME", "0892756");
+	define("DB_USERNAME", "0892756");
+	define("DB_PASSWORD", "n4key1a1");
 	define("TABLE_PREFIX", "TVN_");
 
 	require "db.php";
