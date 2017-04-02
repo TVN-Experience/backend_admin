@@ -23,6 +23,7 @@
         [
             "text" => "Tracking",
             "href" => "tracking",
+            "icon" => "my_location"
         ],
         [
             "text" => "Afbeeldingen",
