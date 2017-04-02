@@ -1,6 +1,6 @@
 <?php
 	require 'config.php';
-	//require 'functions/checkLoggedIn.php';
+	require 'functions/checkLoggedIn.php';
 ?>
 
 <!DOCTYPE html>
