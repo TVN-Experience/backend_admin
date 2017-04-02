@@ -52,6 +52,11 @@ $trackings = $apiConnection->get("tracking");
                     </tr>
                     <?php
                 }
+                if(empty($trackings)) {
+                    ?>
+                    <td class="mdl-data-table__cell--non-numeric" colspan="5">Geen gegevens.</td>
+                    <?php
+                }
                 ?>
                 </tbody>
             </table>

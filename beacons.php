@@ -48,6 +48,11 @@ $beacons = $apiConnection->get("beacons");
                     </tr>
                     <?php
                 }
+                if(empty($beacons)) {
+                    ?>
+                    <td class="mdl-data-table__cell--non-numeric" colspan="3">Geen gegevens.</td>
+                    <?php
+                }
                 ?>
                 </tbody>
             </table>

@@ -46,6 +46,11 @@ $images = $apiConnection->get("images");
                     </tr>
                     <?php
                 }
+                if(empty($images)) {
+                    ?>
+                    <td class="mdl-data-table__cell--non-numeric" colspan="2">Geen gegevens.</td>
+                    <?php
+                }
                 ?>
                 </tbody>
             </table>

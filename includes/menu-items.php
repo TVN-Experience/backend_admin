@@ -9,7 +9,7 @@
 			"href" => "routes",
 		],
         [
-            "text" => "Apartments",
+            "text" => "Appartementen",
             "href" => "apartments"
 
         ],
@@ -26,7 +26,7 @@
             "href" => "tracking",
         ],
         [
-            "text" => "Images",
+            "text" => "Afbeeldingen",
             "href" => "images",
         ],
 		[

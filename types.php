@@ -48,6 +48,11 @@ $types = $apiConnection->get("types");
 						</tr>
 						<?php
 					}
+					if(empty($types)) {
+						?>
+						<td class="mdl-data-table__cell--non-numeric" colspan="3">Geen gegevens.</td>
+						<?php
+					}
 					?>
 				</tbody>
 			</table>

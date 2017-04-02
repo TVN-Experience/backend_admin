@@ -36,7 +36,7 @@ $apartments = $apiConnection->get("apartments");
                     <th class="mdl-data-table__cell--numeric">Type_Id</th>
                     <th class="mdl-data-table__cell--non-numeric">Afmetingen</th>
                     <th class="mdl-data-table__cell--non-numeric">Omschrijving</th>
-                    <th class="mdl-data-table__cell--numeric">verdiepingen</th>
+                    <th class="mdl-data-table__cell--numeric">Verdiepingen</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -50,6 +50,11 @@ $apartments = $apiConnection->get("apartments");
                         <td class="mdl-data-table__cell--non-numeric"><?php echo $apartment->description; ?></td>
                         <td class="mdl-data-table__cell--numeric"><?php echo $apartment->floors; ?></td>
                     </tr>
+                    <?php
+                }
+                if(empty($apartments)) {
+                    ?>
+                    <td class="mdl-data-table__cell--non-numeric" colspan="5">Geen gegevens.</td>
                     <?php
                 }
                 ?>
