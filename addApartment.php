@@ -1,5 +1,6 @@
 <?php
 require 'config.php';
+require 'functions/checkLoggedIn.php';
 
 savePostedApartment();
 

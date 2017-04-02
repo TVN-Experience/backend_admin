@@ -28,11 +28,7 @@
 					<?php
 				}
 			?>
-				<?php
-					//var_dump($apiConnection->get("types", "", []));
-					// (required)endpoint, id, parameters
-				?>
-
+				<br>
 				<iframe height="500" src="https://www.youtube.com/embed/2tUaYRVTch0?rel=0?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 			</div>
