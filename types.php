@@ -26,7 +26,7 @@ $types = $apiConnection->get("types");
 
 			<h1>Woningtypes</h1>
 
-			<a class="buttonlink" href="type">
+			<a class="buttonlink" href="addType">
 				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"><i class="material-icons">add</i>Woningtype toevoegen</button>
 			</a>
 			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">

@@ -9,8 +9,25 @@
 			"href" => "routes",
 		],
         [
+            "text" => "Apartments",
+            "href" => "apartments"
+
+        ],
+        [
             "text" => "Types",
-            "href" => "types"
+            "href" => "types",
+        ],
+        [
+            "text" => "Beacons",
+            "href" => "beacons"
+        ],
+        [
+            "text" => "Tracking",
+            "href" => "tracking",
+        ],
+        [
+            "text" => "Images",
+            "href" => "images",
         ],
 		[
 			"text" => "Opstartbericht",
