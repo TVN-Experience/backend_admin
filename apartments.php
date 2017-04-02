@@ -38,6 +38,7 @@ $apartments = $apiConnection->get("apartments");
                     <th class="mdl-data-table__cell--non-numeric">Afmetingen</th>
                     <th class="mdl-data-table__cell--non-numeric">Omschrijving</th>
                     <th class="mdl-data-table__cell--numeric">Verdiepingen</th>
+                    <th class="mdl-data-table__cell--numeric">Price</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -50,6 +51,7 @@ $apartments = $apiConnection->get("apartments");
                         <td class="mdl-data-table__cell--non-numeric"><?php echo $apartment->measurements; ?></td>
                         <td class="mdl-data-table__cell--non-numeric"><?php echo $apartment->description; ?></td>
                         <td class="mdl-data-table__cell--numeric"><?php echo $apartment->floors; ?></td>
+                        <td class="mdl-data-table__cell--numeric">€<?php echo number_format($apartment->price, 0, ",", "."); ?></td>
                     </tr>
                     <?php
                 }
