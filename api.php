@@ -35,7 +35,7 @@
 			$options = array(
 				'http' => array(
 					'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-					'method'  => 'GET',
+					'method'  => 'DELETE',
 					'content' => http_build_query($parameters)
 				)
 			);
@@ -45,7 +45,7 @@
 		private function doRequest($endpoint, $id, $options) {
 			$context  = stream_context_create($options);
 			$resultjson = file_get_contents(BASE_API_URL.$endpoint."/".$id, false, $context);
-			var_dump(BASE_API_URL.$endpoint."/".$id);
+			//var_dump(BASE_API_URL.$endpoint."/".$id);
 			$result = json_decode($resultjson);
 			return $result;
 		}
