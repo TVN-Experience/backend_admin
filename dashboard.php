@@ -1,6 +1,6 @@
 <?php
 	require 'config.php';
-	//require 'functions/checkLoggedIn.php';
+	require 'functions/checkLoggedIn.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,21 +17,24 @@
 		?>
 		<main class="mdl-layout__content">
 			<div class="page-content">
-				<a class="buttonlink" href="routes">
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
-						<i class="material-icons">navigation</i> Routes bewerken
-					</button>
-				</a>
-				<a class="buttonlink" href="startupMessage">
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
-						<i class="material-icons">message</i> Opstartbericht bewerken
-					</button>
-				</a>
-
+			<?php
+				foreach ($menuItems as $menuItem) {
+					?>
+					<a class="buttonlink" href="<?php echo $menuItem['href']; ?>">
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+							<i class="material-icons"><?php echo $menuItem['icon']; ?></i> <?php echo $menuItem['text']; ?>
+						</button>
+					</a>
+					<?php
+				}
+			?>
 				<?php
-					var_dump($apiConnection->get("types", "", []));
+					//var_dump($apiConnection->get("types", "", []));
 					// (required)endpoint, id, parameters
 				?>
+
+				<iframe height="500" src="https://www.youtube.com/embed/2tUaYRVTch0?rel=0?ecver=1" frameborder="0" allowfullscreen></iframe>
+
 			</div>
 		</main>
 	</div>

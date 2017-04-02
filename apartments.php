@@ -1,9 +1,15 @@
 <?php
 require 'config.php';
+require 'functions/checkLoggedIn.php';
 ?>
 
 <?php
 $apartments = $apiConnection->get("apartments");
+$typesArray = [];
+$types = $apiConnection->get("types");
+foreach ($types as $type) {
+    $typesArray[$type->id] = $type->type;
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,10 +39,11 @@ $apartments = $apiConnection->get("apartments");
                 <thead>
                 <tr>
                     <th class="mdl-data-table__cell--numeric">Id</th>
-                    <th class="mdl-data-table__cell--numeric">Type_Id</th>
+                    <th class="mdl-data-table__cell--numeric">Type</th>
                     <th class="mdl-data-table__cell--non-numeric">Afmetingen</th>
                     <th class="mdl-data-table__cell--non-numeric">Omschrijving</th>
                     <th class="mdl-data-table__cell--numeric">Verdiepingen</th>
+                    <th class="mdl-data-table__cell--numeric">Price</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -45,10 +52,11 @@ $apartments = $apiConnection->get("apartments");
                     ?>
                     <tr>
                         <td class="mdl-data-table__cell--numeric"><?php echo $apartment->id; ?></td>
-                        <td class="mdl-data-table__cell--numeric"><?php echo $apartment->type_id; ?></td>
+                        <td class="mdl-data-table__cell--numeric"><?php echo $typesArray[$apartment->type_id]; ?></td>
                         <td class="mdl-data-table__cell--non-numeric"><?php echo $apartment->measurements; ?></td>
-                        <td class="mdl-data-table__cell--non-numeric"><?php echo $apartment->description; ?></td>
+                        <td class="mdl-data-table__cell--non-numeric apartment-description"><?php echo $apartment->description; ?></td>
                         <td class="mdl-data-table__cell--numeric"><?php echo $apartment->floors; ?></td>
+                        <td class="mdl-data-table__cell--numeric">€<?php echo number_format($apartment->price, 0, ",", "."); ?></td>
                     </tr>
                     <?php
                 }

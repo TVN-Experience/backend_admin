@@ -3,35 +3,32 @@
 		[
 			"text" => "Dashboard",
 			"href" => "dashboard",
-		],
-		[
-			"text" => "Routes",
-			"href" => "routes",
+			"icon" => "dashboard"
 		],
         [
             "text" => "Appartementen",
-            "href" => "apartments"
-
+            "href" => "apartments",
+            "icon" => "home"
         ],
         [
             "text" => "Types",
             "href" => "types",
+            "icon" => "merge_type"
         ],
         [
             "text" => "Beacons",
-            "href" => "beacons"
+            "href" => "beacons",
+            "icon" => "bluetooth_connected"
         ],
         [
             "text" => "Tracking",
             "href" => "tracking",
+            "icon" => "my_location"
         ],
         [
             "text" => "Afbeeldingen",
             "href" => "images",
-        ],
-		[
-			"text" => "Opstartbericht",
-			"href" => "startupMessage",
-		]
+            "icon" => "collections"
+        ]
 	];
 ?>
