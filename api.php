@@ -44,9 +44,14 @@
 
 		private function doRequest($endpoint, $id, $options) {
 			$context  = stream_context_create($options);
-			$resultjson = file_get_contents(BASE_API_URL.$endpoint."/".$id, false, $context);
-			var_dump(BASE_API_URL.$endpoint."/".$id);
+			$resultjson = @file_get_contents(BASE_API_URL.$endpoint."/".$id, false, $context);
 			$result = json_decode($resultjson);
+			if($result == null) {
+				$result = [];
+			}
+			if($resultjson === FALSE) {
+				$result = [];
+			}
 			return $result;
 		}
 	}
