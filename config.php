@@ -4,9 +4,9 @@
 
 	//Database configuration
 	define("DB_SERVER", "localhost");
-	define("DB_NAME", "0892756");
-	define("DB_USERNAME", "0892756");
-	define("DB_PASSWORD", "n4key1a1");
+	define("DB_NAME", "prj_2016_2017_bcp_mt3b_t2");
+	define("DB_USERNAME", "root");
+	define("DB_PASSWORD", "");
 	define("TABLE_PREFIX", "TVN_");
 
 	require "db.php";
