@@ -63,7 +63,7 @@ $apartments = $apiConnection->get("apartments");
 function savePostedBeacons() {
     global $apiConnection;
     if(isset($_POST["apartment_id"]) && isset($_POST["description"]) && !empty($_POST["apartment_id"])) {
-        $apartment_id = $_POST["apartment_id"];
+        $apartment_id = (int)$_POST["apartment_id"];
         $description = $_POST["description"];
         $addBeacons = $apiConnection->post("beacons", "", ["apartment_id" => $apartment_id, "description" => $description]);
         header("location: beacons");

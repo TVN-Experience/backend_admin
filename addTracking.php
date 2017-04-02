@@ -82,19 +82,23 @@ $beacons = $apiConnection->get("beacons");
 <?php
 function savePostedTracking() {
     global $apiConnection;
-    if(isset($_POST["type_id"]) && isset($_POST["start_time"]) && isset($_POST["end_time"])
-        && isset($_POST["mac_address"]) && !empty($_POST["type_id"])) {
-        $type_id = $_POST["type_id"];
+    global $backendDB;
+    if(isset($_POST["beacon_id"]) && isset($_POST["start_time"]) && isset($_POST["end_time"])
+        && isset($_POST["mac_address"]) && !empty($_POST["beacon_id"])) {
+        $beacon_id = $_POST["beacon_id"];
         $start_time = $_POST["start_time"];
         $end_time = $_POST["end_time"];
         $mac_address = $_POST["mac_address"];
-        $addApartment = $apiConnection->post("apartments", "",
+        $addApartment = $apiConnection->post("tracking", "",
             [
-                "type_id" => $type_id,
+                "beacon_id" => (int)$beacon_id,
                 "start_time" => $start_time,
                 "end_time" => $end_time,
                 "mac_address" => $mac_address
             ]);
+        var_dump($_POST);
+        var_dump($addApartment);
+        echo "moet t gedaan hebben";
         header("location: tracking");
         die();
     }
