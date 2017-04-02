@@ -17,19 +17,20 @@
 		?>
 		<main class="mdl-layout__content">
 			<div class="page-content">
-				<a class="buttonlink" href="routes">
+			<?php
+			foreach ($menuItems as $menuItem) {
+				?>
+				<a class="buttonlink" href="<?php echo $menuItem['href']; ?>">
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
-						<i class="material-icons">navigation</i> Routes bewerken
+						<i class="material-icons"><?php echo $menuItem['icon']; ?></i> <?php echo $menuItem['text']; ?>
 					</button>
 				</a>
-				<a class="buttonlink" href="startupMessage">
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
-						<i class="material-icons">message</i> Opstartbericht bewerken
-					</button>
-				</a>
-
+				<br />
 				<?php
-					var_dump($apiConnection->get("types", "", []));
+			}
+			?>
+				<?php
+					//var_dump($apiConnection->get("types", "", []));
 					// (required)endpoint, id, parameters
 				?>
 			</div>
