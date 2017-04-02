@@ -1,6 +1,6 @@
 <?php
 	require 'config.php';
-	require 'functions/checkLoggedIn.php';
+	//require 'functions/checkLoggedIn.php';
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +27,10 @@
 						<i class="material-icons">message</i> Opstartbericht bewerken
 					</button>
 				</a>
+
+				<?php
+					var_dump($apiConnection->get("types", "1"));
+				?>
 			</div>
 		</main>
 	</div>
