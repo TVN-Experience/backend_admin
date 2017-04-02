@@ -34,6 +34,7 @@ $images = $apiConnection->get("images");
                 <thead>
                 <tr>
                     <th class="mdl-data-table__cell--numeric">Id</th>
+                    <th class="mdl-data-table__cell--non-numeric">Voorbeeld</th>
                     <th class="mdl-data-table__cell--non-numeric">Uri</th>
                 </tr>
                 </thead>
@@ -43,7 +44,8 @@ $images = $apiConnection->get("images");
                     ?>
                     <tr>
                         <td class="mdl-data-table__cell--numeric"><?php echo $image->id; ?></td>
-                        <td class="mdl-data-table__cell--non-numeric"><?php echo $image->uri; ?></td>
+                        <td class="mdl-data-table__cell--non-numeric"><img class="preview-img" src="<?php echo $image->uri; ?>" /></td>
+                        <td class="mdl-data-table__cell--non-numeric"><a target="_blank" href="<?php echo $image->uri; ?>"><?php echo $image->uri; ?></a></td>
                     </tr>
                     <?php
                 }

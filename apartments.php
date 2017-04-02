@@ -5,6 +5,11 @@ require 'functions/checkLoggedIn.php';
 
 <?php
 $apartments = $apiConnection->get("apartments");
+$typesArray = [];
+$types = $apiConnection->get("types");
+foreach ($types as $type) {
+    $typesArray[$type->id] = $type->type;
+}
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +52,7 @@ $apartments = $apiConnection->get("apartments");
                     ?>
                     <tr>
                         <td class="mdl-data-table__cell--numeric"><?php echo $apartment->id; ?></td>
-                        <td class="mdl-data-table__cell--numeric"><?php echo $apiConnection->get("types", $apartment->type_id)->type; ?></td>
+                        <td class="mdl-data-table__cell--numeric"><?php echo $typesArray[$apartment->type_id]; ?></td>
                         <td class="mdl-data-table__cell--non-numeric"><?php echo $apartment->measurements; ?></td>
                         <td class="mdl-data-table__cell--non-numeric apartment-description"><?php echo $apartment->description; ?></td>
                         <td class="mdl-data-table__cell--numeric"><?php echo $apartment->floors; ?></td>

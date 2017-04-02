@@ -25,7 +25,6 @@
 							<i class="material-icons"><?php echo $menuItem['icon']; ?></i> <?php echo $menuItem['text']; ?>
 						</button>
 					</a>
-					<br />
 					<?php
 				}
 			?>

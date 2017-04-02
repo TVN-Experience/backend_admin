@@ -9,9 +9,10 @@ DROP TABLE IF EXISTS `tvn_apartments`;
 CREATE TABLE `tvn_apartments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type_id` int(11) NOT NULL,
-  `measurements` varchar(8) NOT NULL,
-  `description` varchar(255) NOT NULL,
+  `measurements` varchar(255) NOT NULL,
+  `description` varchar(2048) NOT NULL,
   `floors` int(8) NOT NULL,
+  `price` int(8) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `type_id` (`type_id`),
   CONSTRAINT `tvn_apartments_ibfk_2` FOREIGN KEY (`type_id`) REFERENCES `tvn_types` (`id`)
@@ -32,7 +33,7 @@ CREATE TABLE `tvn_beacons` (
 DROP TABLE IF EXISTS `tvn_images`;
 CREATE TABLE `tvn_images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `uri` varchar(64) NOT NULL,
+  `uri` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -49,6 +50,8 @@ CREATE TABLE `tvn_images_apartments` (
   CONSTRAINT `tvn_images_apartments_ibfk_2` FOREIGN KEY (`images_id`) REFERENCES `tvn_images` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO `tvn_images_apartments` (`id`, `apartments_id`, `images_id`) VALUES
+(2,	3,	1);
 
 DROP TABLE IF EXISTS `tvn_tracking`;
 CREATE TABLE `tvn_tracking` (
@@ -80,7 +83,5 @@ CREATE TABLE `tvn_users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `tvn_users` (`id`, `username`, `password`) VALUES
-(1,	'test',	'68TD.ca3w2F9I');
 
--- 2017-04-02 15:43:15
+-- 2017-04-02 18:48:56
