@@ -71,7 +71,7 @@ function savePostedImage() {
 
                 $addImage = $apiConnection->post("images", "",
                 [
-                    "uri" => $backendDB->escapeString($target_file);
+                    "uri" => $backendDB->escapeString($target_file)
                 ]);
 
                 header("location: images");
