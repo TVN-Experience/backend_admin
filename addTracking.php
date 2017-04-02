@@ -1,7 +1,7 @@
 <?php
 require 'config.php';
 
-savePostedApartment();
+savePostedTracking();
 
 $beacons = $apiConnection->get("beacons");
 ?>
@@ -24,7 +24,7 @@ $beacons = $apiConnection->get("beacons");
                 //displayMessage("");
                 ?>
 
-                <h1>Woning toevoegen</h1>
+                <h1>Tracking toevoegen</h1>
 
                 <form action="addApartment" method="post">
 
