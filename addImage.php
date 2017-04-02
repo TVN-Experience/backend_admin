@@ -28,7 +28,7 @@ $types = $apiConnection->get("types");
                     }
                 ?>
 
-                <h1>Woning toevoegen</h1>
+                <h1>Afbeelding toevoegen</h1>
 
                 <form action="addImage" method="post" enctype="multipart/form-data">
                 <div class="mdl-textfield mdl-js-textfield">

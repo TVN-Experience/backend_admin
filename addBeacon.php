@@ -24,12 +24,12 @@ $apartments = $apiConnection->get("apartments");
                 //displayMessage("");
                 ?>
 
-                <h1>Woning toevoegen</h1>
+                <h1>Beacon toevoegen</h1>
 
-                <form action="addApartment" method="post">
+                <form action="addBeacon" method="post">
 
                     <div class="mdl-select mdl-js-select mdl-select--floating-label">
-                        <select class="mdl-select__input" id="type_id" name="type_id">
+                        <select class="mdl-select__input" id="apartment_id" name="apartment_id">
                             <option value=""></option>
                             <?php
                             foreach ($apartments as $apartment) {
@@ -39,7 +39,7 @@ $apartments = $apiConnection->get("apartments");
                             }
                             ?>
                         </select>
-                        <label class="mdl-select__label" for="type_id">Type id</label>
+                        <label class="mdl-select__label" for="apartment_id">Appartement id</label>
                     </div>
 
                     <br/>
@@ -62,11 +62,11 @@ $apartments = $apiConnection->get("apartments");
 <?php
 function savePostedBeacons() {
     global $apiConnection;
-    if(isset($_POST["type_id"]) && isset($_POST["description"]) && !empty($_POST["type_id"])) {
-        $type = $_POST["type"];
+    if(isset($_POST["apartment_id"]) && isset($_POST["description"]) && !empty($_POST["apartment_id"])) {
+        $apartment_id = $_POST["apartment_id"];
         $description = $_POST["description"];
-        $addBeacons = $apiConnection->post("beacons", "", ["type" => $type, "description" => $description]);
-        header("location: types");
+        $addBeacons = $apiConnection->post("beacons", "", ["apartment_id" => $apartment_id, "description" => $description]);
+        header("location: beacons");
         die();
     }
 }

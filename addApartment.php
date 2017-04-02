@@ -24,7 +24,7 @@ $types = $apiConnection->get("types");
                 //displayMessage("");
                 ?>
 
-                <h1>Woning toevoegen</h1>
+                <h1>Appartement toevoegen</h1>
 
                 <form action="addApartment" method="post">
 

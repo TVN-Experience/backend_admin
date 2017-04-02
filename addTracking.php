@@ -26,7 +26,7 @@ $beacons = $apiConnection->get("beacons");
 
                 <h1>Tracking toevoegen</h1>
 
-                <form action="addApartment" method="post">
+                <form action="addTracking" method="post">
 
                     <div class="mdl-select mdl-js-select mdl-select--floating-label">
                         <select class="mdl-select__input" id="beacon_id" name="beacon_id">
@@ -42,27 +42,29 @@ $beacons = $apiConnection->get("beacons");
                         <label class="mdl-select__label" for="beacon_id">Beacon id</label>
                     </div>
 
+                    <label class="" for="start_time">Begin tijd</label>
                     <div class="mdl-textfield mdl-js-textfield">
 
-                        <input class="mdl-textfield__input" type="text" name="start_time" id="start_time"
+                        <input class="mdl-textfield__input" type="datetime-local" name="start_time" id="start_time"
                                value="<?php if(isset($_POST['start_time'])) { echo $_POST['start_time'];} ?>">
 
-                        <label class="mdl-textfield__label" for="start_time">Begin tijd</label>
+                        <!-- <label class="mdl-textfield__label" for="start_time">Begin tijd</label> -->
                     </div>
 
                     <br/>
+                    <label class="" for="end_time">Eind tijd</label>
                     <div class="mdl-textfield mdl-js-textfield">
 
-                        <input class="mdl-textfield__input" type="text" name="end_time" id="end_time"
+                        <input class="mdl-textfield__input" type="datetime-local" name="end_time" id="end_time"
                                value="<?php if(isset($_POST['end_time'])) { echo $_POST['end_time'];} ?>">
 
-                        <label class="mdl-textfield__label" for="end_time">eind tijd</label>
+                        <!-- <label class="mdl-textfield__label" for="end_time">Eind tijd</label> -->
                     </div>
 
                     <br/>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <textarea class="mdl-textfield__input" type="text" name="mac_address" id="mac_address"
-                        ><?php if(isset($_POST['mac_address'])) { echo $_POST['mac_address'];} ?></textarea>
+                        <input class="mdl-textfield__input" type="text" name="mac_address" id="mac_address"
+                        value="<?php if(isset($_POST['mac_address'])) { echo $_POST['mac_address'];} ?>">
 
                         <label class="mdl-textfield__label" for="description">mac adres</label>
                     </div>
@@ -93,7 +95,7 @@ function savePostedTracking() {
                 "end_time" => $end_time,
                 "mac_address" => $mac_address
             ]);
-        header("location: addTracking");
+        header("location: tracking");
         die();
     }
 }

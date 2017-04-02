@@ -24,7 +24,7 @@
 				//displayMessage("");
 			?>
 
-				<h1>Woningtype toevoegen</h1>
+				<h1>Type toevoegen</h1>
 
 				<form action="addType" method="post">
 					<div class="mdl-textfield mdl-js-textfield">
