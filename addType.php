@@ -51,8 +51,8 @@
 	function savePostedType() {
 		global $apiConnection;
 		if(isset($_POST["type"]) && isset($_POST["description"]) && !empty($_POST["type"])) {
-			$type = urlencode($_POST["type"]);
-			$description = urlencode($_POST["description"]);
+			$type = $_POST["type"];
+			$description = $_POST["description"];
 			$addType = $apiConnection->post("types", "", ["type" => $type, "description" => $description]);
 			header("location: types");
 			die();
