@@ -3,7 +3,7 @@
 	session_start();
 
 	//Database configuration
-	define("DB_SERVER", "https://sql.hosted.hr.nl");
+	define("DB_SERVER", "localhost");
 	define("DB_NAME", "0892756");
 	define("DB_USERNAME", "0892756");
 	define("DB_PASSWORD", "n4key1a1");
