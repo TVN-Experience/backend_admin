@@ -18,7 +18,6 @@
 	if (isset($_POST["username"]) && isset($_POST["password"])) {
 		$postedUsername = $_POST["username"];
 		$postedPassword = @crypt($_POST["password"], sha1('TVN-Experience')); // Encrypt the password
-		var_dump($postedPassword);
 		if (!empty($postedUsername) && !empty($postedPassword)) {
 			$sql = "SELECT `id` FROM  `" . TABLE_PREFIX . "users` WHERE  `username` =  '$postedUsername' AND `password` = '$postedPassword'";
 			$result = $backendDB->query($sql);
