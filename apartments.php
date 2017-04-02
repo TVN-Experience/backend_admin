@@ -49,7 +49,7 @@ $apartments = $apiConnection->get("apartments");
                         <td class="mdl-data-table__cell--numeric"><?php echo $apartment->id; ?></td>
                         <td class="mdl-data-table__cell--numeric"><?php echo $apartment->type_id; ?></td>
                         <td class="mdl-data-table__cell--non-numeric"><?php echo $apartment->measurements; ?></td>
-                        <td class="mdl-data-table__cell--non-numeric"><?php echo $apartment->description; ?></td>
+                        <td class="mdl-data-table__cell--non-numeric apartment-description"><?php echo $apartment->description; ?></td>
                         <td class="mdl-data-table__cell--numeric"><?php echo $apartment->floors; ?></td>
                         <td class="mdl-data-table__cell--numeric">€<?php echo number_format($apartment->price, 0, ",", "."); ?></td>
                     </tr>

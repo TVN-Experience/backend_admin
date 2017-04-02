@@ -22,3 +22,13 @@ body {
 .buttonlink {
   text-decoration: none;
 }
+
+.apartment-description {
+	max-width: 240px;
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+.apartment-description * {
+	max-width: 100%;
+}
