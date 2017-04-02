@@ -28,16 +28,20 @@
 
 				<form action="addType" method="post">
 					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" type="text" name="type" id="type" value="<?php if(isset($_POST['type'])) { echo $_POST['type'];} ?>">
+						<input class="mdl-textfield__input" type="text" name="type" id="type"
+							   value="<?php if(isset($_POST['type'])) { echo $_POST['type'];} ?>">
 						<label class="mdl-textfield__label" for="type">Naam</label>
 					</div>
 					<br/>
 					<div class="mdl-textfield mdl-js-textfield">
-						<textarea class="mdl-textfield__input" type="text" name="description" id="description" rows="3"><?php if(isset($_POST['description'])) { echo $_POST['description'];} ?></textarea>
+						<textarea class="mdl-textfield__input" type="text" name="description" id="description" rows="3"
+						><?php if(isset($_POST['description'])) { echo $_POST['description'];} ?></textarea>
+
 						<label class="mdl-textfield__label" for="description">Beschrijving</label>
 					</div>
 					<br/>
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" type="submit" name="submit">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
+							type="submit" name="submit">
 						<i class="material-icons">save</i> Opslaan
 					</button>
 				</form>
