@@ -1,13 +1,13 @@
 <?php
 	//Start a session to catch if user is logged in
 	session_start();
-
+	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 	//Database configuration
 	define("DB_SERVER", "localhost");
 	define("DB_NAME", "prj_2016_2017_bcp_mt3b_t2");
 	define("DB_USERNAME", "root");
 	define("DB_PASSWORD", "");
-	define("TABLE_PREFIX", "TVN_");
+	define("TABLE_PREFIX", "tvn_");
 
 	require "db.php";
 	$backendDB = new backendDB();
