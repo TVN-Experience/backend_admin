@@ -29,7 +29,8 @@
 				</a>
 
 				<?php
-					var_dump($apiConnection->get("types", "1"));
+					var_dump($apiConnection->get("types", "1", []));
+					// (required)endpoint, id, parameters
 				?>
 			</div>
 		</main>
