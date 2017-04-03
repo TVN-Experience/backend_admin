@@ -88,9 +88,9 @@ function showPersonsAtApartmentTimeLine() {
 	data.addColumn('date', 'Eindtijd');
 
 	data.addRows([
-		["13-DA-19-4C-99-3D", new Date(0, 0, 0, 12, 11, 0), new Date(0, 0, 0, 12, 50, 0)],
-		["0D-32-19-19-89-9B", new Date(0, 0, 0, 09, 00, 0), new Date(0, 0, 0, 09, 12, 0)],
-		["2F-AB-BF-A2-DC-52", new Date(0, 0, 0, 14, 24, 0), new Date(0, 0, 0, 15, 48, 0)]
+		["04:D3:CF:EC:16:4C", new Date(0, 0, 0, 12, 11, 0), new Date(0, 0, 0, 12, 50, 0)],
+		["0D:32:19:19:89:9B", new Date(0, 0, 0, 09, 00, 0), new Date(0, 0, 0, 09, 12, 0)],
+		["2F:AB:BF:A2:DC:52", new Date(0, 0, 0, 14, 24, 0), new Date(0, 0, 0, 15, 48, 0)]
 	]);
 
 	var options = {
