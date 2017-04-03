@@ -9,6 +9,9 @@
 	<?php
 		require './includes/head.php';
 	?>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript" src="js/pages/dashboard.js"></script>
+
 </head>
 <body>
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
@@ -18,7 +21,7 @@
 		<main class="mdl-layout__content">
 			<div class="page-content">
 			<?php
-				foreach ($menuItems as $menuItem) {
+				/*foreach ($menuItems as $menuItem) {
 					?>
 					<a class="buttonlink" href="<?php echo $menuItem['href']; ?>">
 						<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
@@ -26,11 +29,15 @@
 						</button>
 					</a>
 					<?php
-				}
+				}*/
 			?>
-				<br/><br/>
-				<iframe height="500" src="https://www.youtube.com/embed/2tUaYRVTch0?rel=0?ecver=1" frameborder="0" allowfullscreen></iframe>
 
+				<h4>Tijd die mensen kijken bij appartementtypes</h4>
+				<div class="dashboard-chart" id="timeAtApartmentTypeChart"></div>
+				<h4>Tijd die mensen kijken bij appartementen</h4>
+				<div class="dashboard-chart" id="timeAtApartmentChart"></div> 
+				<h4>Mensen die keken bij appartementtype S+ in het afgelopen uur</h4>
+				<div class="dashboard-chart" id="personsAtApartmentTimeLine"></div> 
 			</div>
 		</main>
 	</div>

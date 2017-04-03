@@ -13,4 +13,6 @@
 <link rel="stylesheet" href="css/style.css">
 
 <!-- Javascript -->
+<script src="js/jquery-3.2.0.min.js"></script>
 <script src="js/nativeColorPicker.js"></script>
+
