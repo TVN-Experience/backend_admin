@@ -30,6 +30,7 @@ $beacons = $apiConnection->get("beacons");
             <a class="buttonlink" href="addBeacon">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"><i class="material-icons">add</i>Beacon toevoegen</button>
             </a>
+            <br />
             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                 <thead>
                 <tr>
